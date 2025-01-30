@@ -1,0 +1,164 @@
+.product-add-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  width: 900px;
+  margin: 40px 270px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensures that the suggestion box is positioned relative to this container */
+}
+
+.adprod-search-bar {
+  margin-bottom: 20px;
+  position: relative; /* Required for absolute positioning of the suggestion box */
+}
+
+.adprod-search-bar input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 1000px;
+}
+
+.product-add-page h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-add-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-add-form div {
+  margin-bottom: 15px;
+}
+
+.product-add-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-add-form input,
+.product-add-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.product-add-form input[type="file"] {
+  padding: 0;
+  border: 1px solid #ddd;
+  width: auto;
+}
+
+.product-add-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.addprod-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.addprod-btn button {
+  transition: transform 0.8s ease-in-out  ; /* Adds smooth transition */
+}
+
+.addprod-btn button:hover {
+  transform: scale(1.1); /* Scales up the button on hover */
+}
+
+.addprod-btn button{
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(26, 219, 26);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.suggestions-list {
+  position: absolute; /* Positions the suggestion box over the content */
+  top: 100%; /* Places it right below the search input */
+  left: 0;
+  width: 100%;
+  margin-top: 5px;
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 10; /* Ensures the suggestion box appears above the content */
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.delivery-time {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 790px; /* Adjust the width as needed */
+  background-color: #fff;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.delivery-time:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  outline: none;
+}
+
+.delivery-time option {
+  padding: 10px;
+}
+
+.ad-image-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 500px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.ad-image-input:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  outline: none;
+}
+
+.ad-image-preview {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ad-image-preview-img {
+  width: 200px;
+  max-height: 200px;
+  object-fit: cover; /* Ensures the image fits within the box without distortion */
+  border-radius: 10px;
+}

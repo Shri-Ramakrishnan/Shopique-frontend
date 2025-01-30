@@ -1,0 +1,105 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 9%;
+  left: 0;
+  width: 210px; /* Slightly wider for better design */
+  height: 100vh;
+  background: linear-gradient(90deg, #007BFF, #1b7ce4);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+/* User profile section */
+.sidebar .user-prof-img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .user-prof-img img {
+  width: 90px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #63b3ed; /* Light blue border */
+  margin-bottom: 10px;
+}
+
+.sidebar .user-prof-img h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.sidebar .user-prof-img p {
+  font-size: 0.9rem;
+  color: #d1e8ff; /* Lighter blue for subtle contrast */
+}
+
+/* Sidebar menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-menu li a,.sidebar-item {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Edit/Save button styles */
+.edit-button,
+.save-button button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-button:hover,
+.save-button button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+      width: 200px; /* Adjust width for smaller screens */
+      padding: 15px;
+  }
+
+  .sidebar .user-prof-img img {
+      width: 70px;
+      height: 70px;
+  }
+
+  .sidebar .user-prof-img h3 {
+      font-size: 1rem;
+  }
+
+  .sidebar-menu li a {
+      font-size: 0.9rem;
+  }
+}
