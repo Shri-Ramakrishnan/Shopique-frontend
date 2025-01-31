@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login/",
+        "https://shopique-backend-1.onrender.com/api/auth/login/",
         formData
       );
       if (response.data.success) {

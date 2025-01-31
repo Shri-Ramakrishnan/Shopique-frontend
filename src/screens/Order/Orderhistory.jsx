@@ -16,7 +16,7 @@ const Orderhistory = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/orders/fetch/${userId}`);
+        const response = await axios.get(`https://shopique-backend-1.onrender.com/api/orders/fetch/${userId}`);
         const result = response.data.data;
         if (result) {
           setOrders(result);
@@ -80,7 +80,7 @@ const Orderhistory = () => {
                     {order.OrderedItems.map((item, index) => (
                       <div key={index} className="order-item">
                         <div className="item-image">
-                          <img src={`http://localhost:5000${item.image}`} alt={item.name} />
+                          <img src={`https://shopique-backend-1.onrender.com${item.image}`} alt={item.name} />
                         </div>
                         <div className="item-details">
                           <p><strong>Item:</strong> {item.name}</p>

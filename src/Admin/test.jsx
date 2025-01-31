@@ -34,11 +34,11 @@ const ProductAddPage = () => {
     // Determine API endpoint based on category
     let apiEndpoint;
     if(product.category === "mobiles"){
-      apiEndpoint = "http://localhost:5000/api/mobiles/prod";
+      apiEndpoint = "https://shopique-backend-1.onrender.com/api/mobiles/prod";
     }else if(product.category === "clothings"){
-      apiEndpoint = "http://localhost:5000/api/clothings/prod";
+      apiEndpoint = "https://shopique-backend-1.onrender.com/api/clothings/prod";
     }else if(product.category === "homeappli"){
-      apiEndpoint = "http://localhost:5000/api/hoappliances/prod";
+      apiEndpoint = "https://shopique-backend-1.onrender.com/api/hoappliances/prod";
     }
 
     try {
@@ -151,7 +151,7 @@ const ProductAddPage = () => {
           {sugclick && imagePreview && (
             <div className="image-preview">
               <img
-                src={`http://localhost:5000${imagePreview}`}
+                src={`https://shopique-backend-1.onrender.com${imagePreview}`}
                 alt="Product Preview"
                 style={{ maxWidth: "200px", maxHeight: "200px" }}
               />

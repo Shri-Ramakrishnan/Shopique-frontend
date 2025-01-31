@@ -52,7 +52,7 @@ const Adminprofile = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/admin/update/${userId}`,
+        `https://shopique-backend-1.onrender.com/admin/update/${userId}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -96,7 +96,7 @@ const Adminprofile = () => {
           <div className="ad-sb-img-cont">
             {user?.image ? (
               <img
-                src={`http://localhost:5000${user.image}`}
+                src={`https://shopique-backend-1.onrender.com${user.image}`}
                 alt="admin"
                 className="ad-sb-img"
               />
@@ -153,7 +153,7 @@ const Adminprofile = () => {
                     {previewImage || user?.image ? (
                       <img
                         src={
-                          previewImage || `http://localhost:5000${user.image}`
+                          previewImage || `https://shopique-backend-1.onrender.com${user.image}`
                         }
                         alt="Admin"
                       />

@@ -28,7 +28,7 @@ const ProductList = () => {
       try {
         console.log("f b a");
         const response = await axios.get(
-          `http://localhost:5000/api/cart/check`,
+          `https://shopique-backend-1.onrender.com/api/cart/check`,
           { params: { userId, itemId } }
         );
         console.log("f a a");
@@ -68,7 +68,7 @@ const ProductList = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "https://shopique-backend-1.onrender.com/api/cart/add",
         productDetails
       );
 
@@ -109,7 +109,7 @@ const ProductList = () => {
           <div className="prod-img-btn-cont">
             <div className="productlist-image">
               {image ? (
-                <img src={`http://localhost:5000${image}`} alt={name} />
+                <img src={`https://shopique-backend-1.onrender.com${image}`} alt={name} />
               ) : (
                 <p>No image available</p>
               )}

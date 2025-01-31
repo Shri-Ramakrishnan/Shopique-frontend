@@ -26,7 +26,7 @@ const ProfilePage = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/auth/fetch/${userId}`
+          `https://shopique-backend-1.onrender.com/api/auth/fetch/${userId}`
         );
         const fetchedData = response.data.data;
 
@@ -89,7 +89,7 @@ const ProfilePage = () => {
 
       // Send the form data to the server using Axios PUT request
       const response = await axios.put(
-        `http://localhost:5000/api/auth/update/${userId}`,
+        `https://shopique-backend-1.onrender.com/api/auth/update/${userId}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -134,7 +134,7 @@ const ProfilePage = () => {
         <div className="user-prof-sidebar">
           <div className="ad-sb-img-cont">
             <img
-              src={`http://localhost:5000${userDetails.image}`}
+              src={`https://shopique-backend-1.onrender.com${userDetails.image}`}
               alt="admin"
               className="ad-sb-img"
             />
@@ -180,7 +180,7 @@ const ProfilePage = () => {
           <div className="profile-content">
             <div className="profile-image">
               <img
-                src={`http://localhost:5000${userDetails.image}`}
+                src={`https://shopique-backend-1.onrender.com${userDetails.image}`}
                 alt="Profile"
               />
               {isEditing && (

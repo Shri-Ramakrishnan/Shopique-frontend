@@ -49,11 +49,11 @@ const ProductAddPage = () => {
 
     let apiEndpoint;
     if (product.category === "mobiles") {
-      apiEndpoint = "http://localhost:5000/api/mobiles/prod";
+      apiEndpoint = "https://shopique-backend-1.onrender.com/api/mobiles/prod";
     } else if (product.category === "clothings") {
-      apiEndpoint = "http://localhost:5000/api/clothings/prod";
+      apiEndpoint = "https://shopique-backend-1.onrender.com/api/clothings/prod";
     } else if (product.category === "homeappli") {
-      apiEndpoint = "http://localhost:5000/api/hoappliances/prod";
+      apiEndpoint = "https://shopique-backend-1.onrender.com/api/hoappliances/prod";
     }
 
     try {
@@ -93,7 +93,7 @@ const ProductAddPage = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/${product.category}/search?query=${query}`
+          `https://shopique-backend-1.onrender.com/api/${product.category}/search?query=${query}`
         );
         setSuggestions(response.data);
       } catch (error) {
@@ -116,7 +116,7 @@ const ProductAddPage = () => {
     try {
       setLoading(true);
       await axios.delete(
-        `http://localhost:5000/api/${product.category}/${product._id}`
+        `https://shopique-backend-1.onrender.com/api/${product.category}/${product._id}`
       );
       alert("Product deleted successfullyy!");
       setProduct({
@@ -163,7 +163,7 @@ const ProductAddPage = () => {
     }
     console.log("bfapi")
     console.log(product.category)
-    let apiEndpoint = `http://localhost:5000/api/${product.category}/update/${product._id}`;
+    let apiEndpoint = `https://shopique-backend-1.onrender.com/api/${product.category}/update/${product._id}`;
   
     try {
       setLoading(true);
@@ -303,7 +303,7 @@ const ProductAddPage = () => {
           <div className="ad-image-preview">
             <img
               className="ad-image-preview-img"
-              src={`http://localhost:5000${imagePreview}`}
+              src={`https://shopique-backend-1.onrender.com${imagePreview}`}
               alt="Product Preview"
             />
           </div>

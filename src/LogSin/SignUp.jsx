@@ -24,7 +24,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup/",
+        "https://shopique-backend-1.onrender.com/api/auth/signup/",
         formData
       );
       if (response.data.success) {

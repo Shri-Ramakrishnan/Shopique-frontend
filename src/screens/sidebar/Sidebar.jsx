@@ -11,7 +11,7 @@ export default function Sidebar({ userId }) {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/auth/fetch/${userId}`
+          `https://shopique-backend-1.onrender.com/api/auth/fetch/${userId}`
         );
         const username = response.data.data;
         setUsername(username);

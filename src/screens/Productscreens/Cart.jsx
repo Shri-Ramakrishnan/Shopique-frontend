@@ -16,7 +16,7 @@ export default function Cart() {
       const fetchCartData = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:5000/api/cart/fetch`,
+            `https://shopique-backend-1.onrender.com/api/cart/fetch`,
             {
               params: { userId },
             }
@@ -48,7 +48,7 @@ export default function Cart() {
     const updatedItem = updatedCartItems.find((item) => item._id === itemId);
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/cart/update-quantity`,
+        `https://shopique-backend-1.onrender.com/api/cart/update-quantity`,
         { 
           userId: userId,
           itemId: updatedItem.itemId,
@@ -74,7 +74,7 @@ export default function Cart() {
   const handleRemoveItem = async (itemId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/cart/delete/${itemId}`
+        `https://shopique-backend-1.onrender.com/api/cart/delete/${itemId}`
       );
 
       if (response.status === 200) {
@@ -132,7 +132,7 @@ export default function Cart() {
                 {cartItems.map((item) => (
                   <div className="cart-item" key={item._id}>
                     <img
-                      src={`http://localhost:5000${item.image}`}
+                      src={`https://shopique-backend-1.onrender.com${item.image}`}
                       alt={item.name}
                       className="cart-item-img"
                     />

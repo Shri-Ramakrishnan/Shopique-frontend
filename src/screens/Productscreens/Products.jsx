@@ -62,7 +62,7 @@ const ProductList = () => {
           {/* Product Image */}
           <div className="productlist-image">
             {image ? (
-              <img src={`http://localhost:5000${image}`} alt={name} />
+              <img src={`https://shopique-backend-1.onrender.com${image}`} alt={name} />
             ) : (
               <p>No image available</p>
             )}

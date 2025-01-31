@@ -25,7 +25,7 @@ const Adminorders = () => {
     try {
       // Update the order status to "Accepted"
       const response = await axios.put(
-        "http://localhost:5000/api/admin/update-orders",
+        "https://shopique-backend-1.onrender.com/api/admin/update-orders",
         {
           orderId,
           status: "Accepted", // You can customize the status as per your needs
@@ -87,7 +87,7 @@ const Adminorders = () => {
           <div className="ad-sb-img-cont">
             {user?.image ? (
               <img
-                src={`http://localhost:5000${user.image}`}
+                src={`https://shopique-backend-1.onrender.com${user.image}`}
                 alt="admin"
                 className="ad-sb-img"
               />
@@ -218,7 +218,7 @@ const Adminorders = () => {
                           <div key={index} className="order-item">
                             <div className="item-image">
                               <img
-                                src={`http://localhost:5000${item.image}`}
+                                src={`https://shopique-backend-1.onrender.com${item.image}`}
                                 alt={item.name}
                               />
                             </div>

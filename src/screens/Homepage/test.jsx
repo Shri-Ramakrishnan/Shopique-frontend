@@ -27,9 +27,9 @@ const HomePage = () => {
       try {
         const [mobilesRes, clothingsRes, homeAppliancesRes] = await Promise.all(
           [
-            fetch("http://localhost:5000/api/mobiles/fetch"),
-            fetch("http://localhost:5000/api/clothings/fetch"),
-            fetch("http://localhost:5000/api/hoappliances/fetch"),
+            fetch("https://shopique-backend-1.onrender.com/api/mobiles/fetch"),
+            fetch("https://shopique-backend-1.onrender.com/api/clothings/fetch"),
+            fetch("https://shopique-backend-1.onrender.com/api/hoappliances/fetch"),
           ]
         );
 
@@ -173,7 +173,7 @@ const HomePage = () => {
                         }}
                       >
                         <img
-                          src={`http://localhost:5000${item.image}`}
+                          src={`https://shopique-backend-1.onrender.com${item.image}`}
                           alt={item.name}
                           className="product-image"
                         />
@@ -210,7 +210,7 @@ const HomePage = () => {
                         }}
                       >
                         <img
-                          src={`http://localhost:5000${item.image}`}
+                          src={`https://shopique-backend-1.onrender.com${item.image}`}
                           alt={item.name}
                           className="product-image"
                         />
@@ -247,7 +247,7 @@ const HomePage = () => {
                         }}
                       >
                         <img
-                          src={`http://localhost:5000${item.image}`}
+                          src={`https://shopique-backend-1.onrender.com${item.image}`}
                           alt={item.name}
                           className="product-image"
                         />

@@ -26,11 +26,11 @@ const AdminHome = () => {
           clothProdRes,
           homeAppliRes,
         ] = await Promise.all([
-          axios.get("http://localhost:5000/api/admin/userdata"),
-          axios.get("http://localhost:5000/api/admin/pendingorders"),
-          axios.get("http://localhost:5000/api/admin/fetchmobiles"),
-          axios.get("http://localhost:5000/api/admin/fetchcloths"),
-          axios.get("http://localhost:5000/api/admin/fetchhomeappliance"),
+          axios.get("https://shopique-backend-1.onrender.com/api/admin/userdata"),
+          axios.get("https://shopique-backend-1.onrender.com/api/admin/pendingorders"),
+          axios.get("https://shopique-backend-1.onrender.com/api/admin/fetchmobiles"),
+          axios.get("https://shopique-backend-1.onrender.com/api/admin/fetchcloths"),
+          axios.get("https://shopique-backend-1.onrender.com/api/admin/fetchhomeappliance"),
         ]);
 
         setUserData(userDataRes.data);
@@ -75,7 +75,7 @@ const AdminHome = () => {
           <div className="ad-sb-img-cont">
             {user?.image ? (
               <img
-                src={`http://localhost:5000${user.image}`}
+                src={`https://shopique-backend-1.onrender.com${user.image}`}
                 alt="admin"
                 className="ad-sb-img"
               />

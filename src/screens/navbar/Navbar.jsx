@@ -13,7 +13,7 @@ export default function Navbar({ userId, pageno = null }) {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/auth/fetch/${userId}`
+          `https://shopique-backend-1.onrender.com/api/auth/fetch/${userId}`
         );
         const user = response.data.data;
         console.log("User Name :", user.username);

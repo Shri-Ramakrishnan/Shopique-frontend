@@ -50,7 +50,7 @@ const Orderdetails = () => {
     };
   console.log("f b a")
     try {
-      const response = await axios.post("http://localhost:5000/api/orders/add", {
+      const response = await axios.post("https://shopique-backend-1.onrender.com/api/orders/add", {
       userId,
       cartItems,
       totalPrice: totalPrice + platformFee + deliveryFee - discount,
