@@ -218,7 +218,7 @@ const HomePage = () => {
             </div>
 
             <div className="category">
-              <h3>Home Appliances</h3>
+              {/* <h3>Home Appliances</h3> */}
               <div className="product-list">
                 {loading ? (
                   <p>Loading products...</p>
