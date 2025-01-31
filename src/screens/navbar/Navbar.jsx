@@ -45,7 +45,7 @@ export default function Navbar({ userId, pageno = null }) {
 
       {!isOrderPage ? (
         <>
-          <div className="nav-search-bar">
+          {/* <div className="nav-search-bar">
             <input
               type="text"
               placeholder="Search for products..."
@@ -54,7 +54,7 @@ export default function Navbar({ userId, pageno = null }) {
             <button className="nav-btns" aria-label="Search">
               <i className="fas fa-search"></i> Search
             </button>
-          </div>
+          </div> */}
 
           <div className="nav-actions">
             <button
