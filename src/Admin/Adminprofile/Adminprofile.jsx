@@ -101,7 +101,7 @@ const Adminprofile = () => {
                 className="ad-sb-img"
               />
             ) : (
-              <div className="placeholder-img">No Image</div>
+              <div className="placeholder-img"></div>
             )}
             <h4 className="ad-sb-username">{user?.username || "Admin"}</h4>
           </div>
@@ -117,19 +117,11 @@ const Adminprofile = () => {
                   Profile
                 </button>
               </li>
-              <li>
-                <button className="ad-sb-btns">User Management</button>
-              </li>
+             
               <li>
                 <button className="ad-sb-btns" onClick={handleOrderclk}>
                   Orders
                 </button>
-              </li>
-              <li>
-                <button className="ad-sb-btns">Report</button>
-              </li>
-              <li>
-                <button className="ad-sb-btns">Settings</button>
               </li>
             </ul>
           </div>
@@ -158,7 +150,7 @@ const Adminprofile = () => {
                         alt="Admin"
                       />
                     ) : (
-                      <div className="placeholder-img">No Image</div>
+                      <div className="placeholder-img"></div>
                     )}
                   </div>
                   <button

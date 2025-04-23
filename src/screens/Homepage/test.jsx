@@ -121,10 +121,7 @@ const HomePage = () => {
                 src={bannerImages[currentImage]}
                 alt={`Banner ${currentImage + 1}`}
               />
-              <div className="banner-content">
-                <h2>Special Offers</h2>
-                <p>Up to 50% off on selected items!</p>
-              </div>
+
             </div>
             <div className="countdown-timer">
               <h3>Hurry up! Limited time offer:</h3>
@@ -268,8 +265,6 @@ const HomePage = () => {
         <div className="footer-content">
           <p>&copy; 2025 E-Commerce Website. All rights reserved.</p>
           <div className="footer-links">
-            <a href="/about">About Us</a>
-            <a href="/contact">Contact</a>
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
           </div>

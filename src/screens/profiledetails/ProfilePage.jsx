@@ -56,13 +56,6 @@ const ProfilePage = () => {
     });
   };
 
-  // Handle image change
-  const handleImageChange = (e) => {
-    setUserDetails({
-      ...userDetails,
-      image: URL.createObjectURL(e.target.files[0]),
-    });
-  };
 
   // Toggle edit/save mode
   const toggleEdit = () => {
@@ -117,9 +110,7 @@ const ProfilePage = () => {
   const handleOnClickorders = () => {
     navigate("/myorders", { state: { userId } });
   };
-  const handleOnClicksettings = () => {
-    navigate("/myorders", { state: { userId } });
-  };
+
   const handleOnClicklogout = () => {
     navigate("/home");
   };
@@ -132,15 +123,7 @@ const ProfilePage = () => {
       {/* Sidebar */}
       <div className="prof-cont">
         <div className="user-prof-sidebar">
-          <div className="ad-sb-img-cont">
-            <img
-              src={`https://shopique-backend-1.onrender.com${userDetails.image}`}
-              alt="admin"
-              className="ad-sb-img"
-            />
-            <h4 className="ad-sb-username">{userDetails.username}</h4>
-          </div>
-          <div className="ad-sb-list-cont">
+         <div className="ad-sb-list-cont">
             <ul className="ad-sb-list-items">
               <li>
                 <button className="ad-sb-btns"
@@ -148,16 +131,9 @@ const ProfilePage = () => {
               </li>
               <li>
                 <button className="ad-sb-btns"
-                onClick={handleOnClickwhishlist}>Whislist</button>
-              </li>
-              <li>
-                <button className="ad-sb-btns"
                 onClick={handleOnClickorders}>My Orders</button>
               </li>
-              <li>
-                <button className="ad-sb-btns"
-                onClick={handleOnClicksettings}>Settings</button>
-              </li>
+           
               <li>
                 <button className="ad-sb-btns" 
                 onClick={handleOnClicklogout}>
@@ -171,18 +147,10 @@ const ProfilePage = () => {
         {/* Profile Page Content */}
         <div className="profile-page">
           <div className="profile-header">
-            <h2>{isEditing ? "Edit Profile" : "View Profile"}</h2>
-            <button className="edit-button" onClick={toggleEdit}>
-              {isEditing ? "Cancel" : "Edit"}
-            </button>
           </div>
 
           <div className="profile-content">
             <div className="profile-image">
-              <img
-                src={`https://shopique-backend-1.onrender.com${userDetails.image}`}
-                alt="Profile"
-              />
               {isEditing && (
                 <input
                   type="file"
@@ -215,37 +183,7 @@ const ProfilePage = () => {
                 />
               </div>
 
-              <div className="profile-field">
-                <label>Password:</label>
-                <input
-                  type="password"
-                  name="password"
-                  value={userDetails.password}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                />
-              </div>
-
-              <div className="profile-field">
-                <label>Mobile Number:</label>
-                <input
-                  type="text"
-                  name="mobile"
-                  value={userDetails.mobile}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                />
-              </div>
-
-              <div className="profile-field">
-                <label>Delivery Address:</label>
-                <textarea
-                  name="address"
-                  value={userDetails.address}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                />
-              </div>
+        
             </div>
 
             {isEditing && (

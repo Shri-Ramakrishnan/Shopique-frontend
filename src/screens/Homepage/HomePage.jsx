@@ -75,8 +75,9 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, [bannerImages.length]);
 
+  // Countdown Timer: 20 days from now
   useEffect(() => {
-    const targetDate = new Date("2025-02-01T00:00:00");
+    const targetDate = new Date(new Date().getTime() + 20 * 24 * 60 * 60 * 1000); // 20 days from now
     const interval = setInterval(() => {
       const now = new Date();
       const diff = targetDate - now;
@@ -111,10 +112,6 @@ const HomePage = () => {
                 src={bannerImages[currentImage]}
                 alt={`Banner ${currentImage + 1}`}
               />
-              <div className="banner-content">
-                <h2>Special Offers</h2>
-                <p>Up to 50% off on selected items!</p>
-              </div>
             </div>
             <div className="countdown-timer">
               <h3>Hurry up! Limited time offer:</h3>
@@ -218,7 +215,6 @@ const HomePage = () => {
             </div>
 
             <div className="category">
-              {/* <h3>Home Appliances</h3> */}
               <div className="product-list">
                 {loading ? (
                   <p>Loading products...</p>
@@ -264,8 +260,6 @@ const HomePage = () => {
         <div className="footer-content">
           <p>&copy; 2025 E-Commerce Website. All rights reserved.</p>
           <div className="footer-links">
-            <a>About Us</a>
-            <a>Contact</a>
             <a>Privacy Policy</a>
             <a>Terms of Service</a>
           </div>

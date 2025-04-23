@@ -161,8 +161,6 @@ const Orderdetails = () => {
                 onChange={(e) => setPaymentMethod(e.target.value)}
               >
                 <option value="Cash on Delivery">Cash on Delivery</option>
-                <option value="Credit/Debit Card">Credit/Debit Card</option>
-                <option value="UPI">UPI</option>
               </select>
             ) : (
               <p> </p>

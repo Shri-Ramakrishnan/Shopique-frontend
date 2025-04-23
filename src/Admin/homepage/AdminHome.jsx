@@ -80,7 +80,7 @@ const AdminHome = () => {
                 className="ad-sb-img"
               />
             ) : (
-              <div className="placeholder-img">No Image</div>
+              <div className="placeholder-img"></div>
             )}
             <h4 className="ad-sb-username">{user?.username || "Admin"}</h4>
           </div>
@@ -96,19 +96,11 @@ const AdminHome = () => {
                   Profile
                 </button>
               </li>
-              <li>
-                <button className="ad-sb-btns">User Management</button>
-              </li>
+            
               <li>
                 <button className="ad-sb-btns" onClick={handleOrderclk}>
                   Orders
                 </button>
-              </li>
-              <li>
-                <button className="ad-sb-btns">Report</button>
-              </li>
-              <li>
-                <button className="ad-sb-btns">Settings</button>
               </li>
             </ul>
           </div>
@@ -139,20 +131,7 @@ const AdminHome = () => {
               <h3>Pending Orders</h3>
               <p>{pendingOrders.length}</p>
             </div>
-            <div className="card">
-              <h3>Reports</h3>
-              <p>View Reports</p>
-            </div>
           </div>
-
-          <section className="recent-activity">
-            <h2>Recent Activity</h2>
-            <ul>
-              <li>User John Doe updated their profile.</li>
-              <li>Product 'Laptop X' added to inventory.</li>
-              <li>Order #12345 shipped.</li>
-            </ul>
-          </section>
         </div>
       </div>
     </div>

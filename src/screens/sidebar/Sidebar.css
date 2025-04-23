@@ -23,7 +23,6 @@
 .sidebar .user-prof-img img {
   width: 90px;
   height: 150px;
-  border-radius: 50%;
   border: 3px solid #63b3ed; /* Light blue border */
   margin-bottom: 10px;
 }
@@ -63,25 +62,6 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-
-/* Edit/Save button styles */
-.edit-button,
-.save-button button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.edit-button:hover,
-.save-button button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {

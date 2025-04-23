@@ -92,7 +92,7 @@ const Adminorders = () => {
                 className="ad-sb-img"
               />
             ) : (
-              <div className="placeholder-img">No Image</div>
+              <div className="placeholder-img"></div>
             )}
             <h4 className="ad-sb-username">{user?.username || "Admin"}</h4>
           </div>
@@ -108,20 +108,11 @@ const Adminorders = () => {
                   Profile
                 </button>
               </li>
-              <li>
-                <button className="ad-sb-btns" >User Management</button>
-              </li>
+            
               <li>
                 <button className="ad-sb-btns" onClick={handleOrderclk}>
                   Orders
                 </button>
-              </li>
-              
-              <li>
-                <button className="ad-sb-btns">Report</button>
-              </li>
-              <li>
-                <button className="ad-sb-btns">Settings</button>
               </li>
             </ul>
           </div>
@@ -154,7 +145,6 @@ const Adminorders = () => {
               className="filter-btn"
               onClick={() => handleFilterOrders("Completed")}
             >
-              Completed Orders
             </h4>
             <h4
               className="filter-btn"
