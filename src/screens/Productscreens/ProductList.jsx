@@ -166,20 +166,8 @@ const ProductList = () => {
               <p className="product-delivery-time">
                 <strong>Delivery Type:</strong> {deliverytime || "N/A"}
               </p>
-              <div className="delivery-checker">
-                <p className="delivery-checker-title">
-                  <strong>Delivery Check:</strong>
-                </p>
-                <input
-                  type="text"
-                  placeholder="Enter Pincode"
-                  className="delivery-input"
-                  maxLength="6"
-                />
-                <button className="check-button">Check</button>
-              </div>
+              
             </div>
-            <div className="ratings-reviews">Ratings and Reviews</div>
           </div>
         </div>
       </div>
