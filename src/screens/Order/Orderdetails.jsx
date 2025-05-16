@@ -174,8 +174,7 @@ const Orderdetails = () => {
           <div>
             <h4>Total items: {cartItems.length}</h4>
             <h4>Discount: ₹{discount}</h4>
-            <h4>Platform Fee: ₹{platformFee}</h4>
-            <h4>Delivery Fee: ₹{deliveryFee}</h4>
+
             <h4>Products in Cart:</h4>
             <ul id="cart-proddet-list">
               {cartItems.map((item) => (

@@ -194,9 +194,7 @@ export default function Cart() {
             <h3>Price Details</h3>
             <div>
               <h4>Total items: {cartItems.length}</h4>
-              <h4>Discount: ₹0</h4> 
-              <h4>Platform Fee: ₹50</h4> 
-              <h4>Delivery Fee: ₹20</h4>
+    
               {/* Added product names and quantities */}
               <h4>Products in Cart:</h4>
               <ul id="cart-proddet-list">
